@@ -10,18 +10,18 @@
 </head>
 <body>
     <div class="options">
-        <input class="font" type="number" min="1" max="100"  value="16" >
-        <button class="bold"><i class="fa-solid fa-bold"></i></button>
-        <button class="italic"><i class="fa-solid fa-italic"></i></button>
-        <button class="underline"><i class="fa-solid fa-underline"></i></button>
-        <button class="left"><i class="fa-solid fa-align-left"></i></button>
-        <button class="center"><i class="fa-solid fa-align-center"></i></button>
-        <button class="right"><i class="fa-solid fa-align-right"></i></button>
-        <button class="capital"><i class="fa-sharp fa-solid fa-font-case"></i></button>
-        <input type="color" class="color"></input>
+        <input class="font"  id="inputfont" onfocus="focusFunction()" onchange="fontInput(this)" type="number" min="1" max="100"  value="16" >
+        <button class="bold" onclick="fontBold(this)"><i class="fa-solid fa-bold"></i></button>
+        <button class="italic"  onclick="fontItalic(this)" ><i class="fa-solid fa-italic"></i></button>
+        <button class="underline" onclick="fontUnderline(this)"><i class="fa-solid fa-underline"></i></button>
+        <button class="left" onclick="leftAlign(this)"><i class="fa-solid fa-align-left"></i></button>
+        <button class="center" onclick="centerAlign(this)" ><i class="fa-solid fa-align-center"></i></button>
+        <button class="right" onclick="rightAlign(this)" ><i class="fa-solid fa-align-right"></i></button>
+        <button class="capital" onclick="capitalize(this)">Aa</button>
+        <input type="color" class="color" onchange="color(this)"></input>
     
     </div>
-    <input class="section" type="text" placeholder="Enter Your Text Here">
+    <input class="section" id="Input" onfocus="focusFunction()" type="text" placeholder="Enter Your Text Here"></input>
 
     <script src="app.js"></script>
 </body>
