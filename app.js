@@ -5,6 +5,7 @@ function focusFunction() {
     }
 
     var input = document.getElementById("Input")
+    
 
     function fontInput(e) {
 
@@ -13,20 +14,47 @@ function focusFunction() {
 
     }
 
+    function changeFontFamily() {
+        var fontFamily = document.getElementById('fontFamilyDropdown').value;
+        input.style.fontFamily = fontFamily;
+    }
     
 function fontBold(){
-
- input.style.fontWeight = "bold"
+    
+    var isBold = input.style.fontWeight;
+if(isBold === "bold" ){
+    
+    input.style.fontWeight = "normal"
 
 }
+else{
+    input.style.fontWeight = "bold"
+}
+
+  }
+
 
 function fontItalic(){
-    input.style.fontStyle = "italic"
+    var isItalic = input.style.fontStyle;
+    if(isItalic === "italic"){
+    input.style.fontStyle = "normal"
+    }else{
+        input.style.fontStyle = "italic"
+    }
 }
 
 function fontUnderline(){
+
+    var isUnderline = input.style.textDecoration;
+    if(isUnderline === "underline"){ 
+
+        input.style.textDecoration = "none"
+}
+else{
     input.style.textDecoration = "underline"
 }
+}
+
 
 function leftAlign(){
     input.style.textAlign= "left"
@@ -41,7 +69,13 @@ function rightAlign(){
 }
 
 function capitalize(){
+    var isUppercase = input.style.textTransform;
+    if(isUppercase === "uppercase"){
+        input.style.textTransform = "none";
+    }
+    else{
     input.style.textTransform = "uppercase"
+}
 }
 
 function color(e){

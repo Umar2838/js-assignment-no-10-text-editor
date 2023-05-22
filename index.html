@@ -10,7 +10,22 @@
 </head>
 <body>
     <div class="options">
-        <input class="font"  id="inputfont" onfocus="focusFunction()" onchange="fontInput(this)" type="number" min="1" max="100"  value="16" >
+        <select class="dropdown" id="fontFamilyDropdown" onchange="changeFontFamily()">
+            <option value="Arial, sans-serif">Arial</option>
+            <option value="Verdana, sans-serif">Verdana</option>
+            <option value="Georgia, serif">Georgia</option>
+            <option value="Helvetica">Helvetica</option>
+        <option value="Times New Roman">Times New Roman</option>
+            <option value="Verdana">Verdana</option><option value="Georgia, serif">Georgia</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Calibri">Calibri</option>
+            <option value="Futura">Futura</option>
+            <option value="Garamond">Garamond</option>
+            <option value="Roboto">Roboto</option>
+            <option value="Open Sans">Open Sans</option>
+            <option value="Times New Roman, serif">Times New Roman</option>
+        </select>
+            <input class="font"  id="inputfont" onfocus="focusFunction()" onchange="fontInput(this)" type="number" min="1" max="100"  value="16"  >
         <button class="bold" onclick="fontBold(this)"><i class="fa-solid fa-bold"></i></button>
         <button class="italic"  onclick="fontItalic(this)" ><i class="fa-solid fa-italic"></i></button>
         <button class="underline" onclick="fontUnderline(this)"><i class="fa-solid fa-underline"></i></button>
@@ -21,7 +36,7 @@
         <input type="color" class="color" onchange="color(this)"></input>
     
     </div>
-    <input class="section" id="Input" onfocus="focusFunction()" type="text" placeholder="Enter Your Text Here"></input>
+    <textarea class="section" id="Input" onfocus="focusFunction()" type="text" placeholder="Enter Your Text Here"></textarea>
 
     <script src="app.js"></script>
 </body>
